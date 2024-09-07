@@ -18,4 +18,12 @@ window.addEventListener('scroll', () => {
 // 深色模式切换
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
 }
+
+// 页面加载时应用用户偏好
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+});
