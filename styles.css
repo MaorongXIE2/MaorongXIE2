@@ -46,7 +46,8 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-menu a:hover {
+.navbar-menu a:hover,
+.navbar-menu a:focus {
     background-color: #333;
     color: #fff;
 }
@@ -105,4 +106,32 @@ body.dark-mode .back-to-top {
     padding: 0 20px;
 }
 
-/* 其余样式保持不变 */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none; /* 默认隐藏 */
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+/* 提升焦点状态的可见性 */
+a:focus,
+button:focus {
+    outline: 2px solid #1e90ff;
+    outline-offset: 2px;
+}
