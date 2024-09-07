@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maorong Xie - Personal Webpage</title>
     <!-- 加载外部样式表 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,6 +33,7 @@
 
 <!-- 头部部分 -->
 <section class="hero" aria-label="Introduction">
+    <img src="IMG_5782.jpeg" alt="Background Image" loading="lazy" />
     <h1>Maorong Xie</h1>
     <p>Researcher in Stem Cells and Retroviruses</p>
 </section>
@@ -58,7 +60,6 @@
             <!-- 其他内容省略 -->
         </ul>
     </section>
-
     <!-- 讲座和会议部分 -->
     <!-- 类似的结构用于其他部分 -->
 </main>
