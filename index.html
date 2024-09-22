@@ -5,76 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maorong Xie - Personal Webpage</title>
-    <!-- 加载外部样式表 -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- 外部CSS -->
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
 <!-- 导航栏 -->
-<header class="navbar">
+<nav class="navbar">
     <div class="navbar-brand">Maorong Xie</div>
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
-    <nav class="navbar-menu" aria-label="Primary Navigation">
+    <div class="hamburger">&#9776;</div>
+    <div class="navbar-menu">
         <a href="#about">About</a>
         <a href="#publications">Publications</a>
         <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
         <a href="#talks">Talks</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
-    </nav>
+    </div>
     <div class="navbar-icons">
         <a href="https://scholar.google.com/citations?user=zwRy9XMAAAAJ&hl=en" target="_blank" title="Google Scholar">
             <i class="fas fa-graduation-cap"></i>
         </a>
     </div>
-</header>
+</nav>
 
 <!-- 头部部分 -->
-<section class="hero" aria-label="Introduction">
-    <img src="IMG_5782.jpeg" alt="Background Image" loading="lazy" />
+<header>
     <h1>Maorong Xie</h1>
     <p>Researcher in Stem Cells and Retroviruses</p>
-</section>
+</header>
 
 <!-- 内容部分 -->
-<main class="container">
-    <!-- 关于我部分 -->
-    <section class="section" id="about" aria-labelledby="about-title">
-        <h2 id="about-title">About Me</h2>
-        <p>I am an active researcher in the field of blood stem cell biology. My work primarily focuses on the expansion of human hematopoietic stem cells and understanding retrovirus behaviors. I am passionate about exploring innovative solutions in biomedical science.</p>
-    </section>
+<div class="container">
+    <div class="section" id="about">
+        <h2>About Me</h2>
+        <div style="display: flex; align-items: center;">
+            <!-- 延迟加载图片 -->
+            <img src="your-photo.jpg" alt="Maorong Xie" style="width: 150px; height: 150px; border-radius: 50%; margin-right: 20px;" loading="lazy">
+            <p>I am an active researcher in the field of blood stem cell biology...</p>
+        </div>
+    </div>
 
-    <!-- 研究项目部分 -->
-    <section class="section" id="research" aria-labelledby="research-title">
-        <h2 id="research-title">Research Projects</h2>
-        <p>My research is centered around stem cell biology and virology. I explore how hematopoietic stem cells can be manipulated for better therapeutic outcomes and study retroviruses for better understanding of their pathogenesis.</p>
-    </section>
+    <div class="section" id="research">
+        <h2>Research Projects</h2>
+        <p>My research is centered around stem cell biology and virology...</p>
+    </div>
 
-    <!-- 发表论文部分 -->
-    <section class="section" id="publications" aria-labelledby="publications-title">
-        <h2 id="publications-title">Key Publications</h2>
-        <ul>
-            <li><strong>Virus-Induced Cell Fusion and Syncytia Formation</strong> - <a href="https://link.springer.com/chapter/10.1007/978-3-031-37936-9_14" target="_blank">Read More</a></li>
-            <!-- 其他内容省略 -->
-        </ul>
-    </section>
-    <!-- 讲座和会议部分 -->
-    <!-- 类似的结构用于其他部分 -->
-</main>
+    <!-- 更多内容 -->
+</div>
 
-<!-- 页脚 -->
 <footer>
     <p>© 2024 Maorong Xie. All rights reserved.</p>
 </footer>
 
 <!-- 回到顶部按钮 -->
-<button class="back-to-top" onclick="scrollToTop()">
+<button class="back-to-top" style="display: none;">
     <i class="fas fa-chevron-up"></i>
 </button>
 
-<!-- 加载外部JavaScript -->
-<script src="main.js" defer></script>
+<!-- 外部JavaScript文件，使用defer延迟加载 -->
+<script src="scripts.js" defer></script>
+
 </body>
 </html>
