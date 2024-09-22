@@ -10,7 +10,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -20,6 +19,7 @@ body {
     padding: 20px;
 }
 
+/* 导航栏样式 */
 .navbar {
     background-color: #1e90ff;
     color: #fff;
@@ -27,61 +27,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky; /* 固定在页面顶部 */
-    top: 0;
-    z-index: 1000;
 }
 
-.navbar-menu {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-menu a {
+.navbar-menu a,
+.navbar-icons a {
     color: #fff;
     text-decoration: none;
     padding: 8px 15px;
-    margin: 0 5px;
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-menu a:hover,
-.navbar-menu a:focus {
+.navbar-icons a:hover {
     background-color: #333;
     color: #fff;
 }
 
-/* 深色模式 */
-body.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-body.dark-mode .navbar {
-    background-color: #444;
-}
-
-body.dark-mode .navbar-menu a {
-    color: #f4f4f4;
-}
-
-body.dark-mode .back-to-top {
-    background-color: #555;
-}
-
-/* 响应式样式 */
 @media (max-width: 768px) {
     .navbar-menu {
         display: none;
         flex-direction: column;
-        background-color: #1e90ff;
         position: absolute;
         top: 50px;
         right: 0;
         width: 100%;
+        background-color: #1e90ff;
         text-align: right;
-        padding: 10px 0;
     }
 
     .navbar-menu.show {
@@ -93,26 +71,41 @@ body.dark-mode .back-to-top {
     }
 }
 
-.hero {
+header {
     height: 50vh;
-    background: url('IMG_5782.jpeg') no-repeat center center/cover;
+    background: url('896.png') no-repeat center center/cover;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: white;
+    text-align: center;
     position: relative;
-    padding: 0 20px;
 }
 
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 回到顶部按钮 */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #1e90ff;
     color: #fff;
-    border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -122,16 +115,8 @@ body.dark-mode .back-to-top {
     font-size: 24px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: none; /* 默认隐藏 */
 }
 
 .back-to-top:hover {
     background-color: #555;
-}
-
-/* 提升焦点状态的可见性 */
-a:focus,
-button:focus {
-    outline: 2px solid #1e90ff;
-    outline-offset: 2px;
 }
